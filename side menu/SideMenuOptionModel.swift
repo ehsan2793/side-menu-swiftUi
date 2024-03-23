@@ -38,7 +38,7 @@ enum SideMenuOptionModel: Int, CaseIterable {
         case .profile:
             return "person"
         case .search:
-            return "magnigyingglass"
+            return "magnifyingglass"
         case .notification:
             return "bell"
         }

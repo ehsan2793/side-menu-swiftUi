@@ -59,14 +59,14 @@
 		7CD007A02BAF5A2800AD397A /* side menu */ = {
 			isa = PBXGroup;
 			children = (
-				7CD007A12BAF5A2800AD397A /* side_menuApp.swift */,
+				7CD007A52BAF5A2A00AD397A /* Assets.xcassets */,
 				7CD007A32BAF5A2800AD397A /* ContentView.swift */,
+				7CD007A72BAF5A2A00AD397A /* Preview Content */,
+				7CD007A12BAF5A2800AD397A /* side_menuApp.swift */,
+				7CD007B12BAF640600AD397A /* SideMenuHeaderView.swift */,
+				7CD007B52BAF7E5E00AD397A /* SideMenuOptionModel.swift */,
 				7CD007B32BAF696800AD397A /* SideMenuRowView.swift */,
 				7CD007AF2BAF623400AD397A /* SideMenuView.swift */,
-				7CD007B52BAF7E5E00AD397A /* SideMenuOptionModel.swift */,
-				7CD007B12BAF640600AD397A /* SideMenuHeaderView.swift */,
-				7CD007A52BAF5A2A00AD397A /* Assets.xcassets */,
-				7CD007A72BAF5A2A00AD397A /* Preview Content */,
 			);
 			path = "side menu";
 			sourceTree = "<group>";

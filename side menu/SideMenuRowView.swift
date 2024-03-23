@@ -8,20 +8,30 @@
 import SwiftUI
 
 struct SideMenuRowView: View {
+    let option: SideMenuOptionModel
+    @Binding var selectedOption: SideMenuOptionModel?
+
+    private var isSelected: Bool {
+        return selectedOption == option
+    }
+
     var body: some View {
         HStack {
-            Image(systemName: "paperplane")
+            Image(systemName: option.systemImageName)
 
-            Text("Message")
+            Text(option.title)
                 .font(.subheadline)
 
             Spacer()
         }
         .padding(.leading)
-        .frame(height: 44)
+        .foregroundStyle(isSelected ? .blue : .primary)
+        .frame(width: 216, height: 44)
+        .background(isSelected ? .blue.opacity(0.15) : .clear)
+        .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
 
 #Preview {
-    SideMenuRowView()
+    SideMenuRowView(option: .dashboard, selectedOption: .constant(.dashboard))
 }
