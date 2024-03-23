@@ -12,18 +12,22 @@ struct ContentView: View {
 
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("start")
+            ZStack {
+                VStack {
+                    Text("start")
+                }
 
-                    .navigationTitle("Home")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        ToolbarItem(placement: .topBarLeading) {
-                            Button(action: { showMenu.toggle() }, label: {
-                                Image(systemName: "line.3.horizontal")
-                            })
-                        }
-                    }
+                SideMenuView(isShowing: $showMenu)
+            }
+            .toolbar(showMenu ? .hidden : .visible, for: .navigationBar)
+            .navigationTitle("Home")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: { showMenu.toggle() }, label: {
+                        Image(systemName: "line.3.horizontal")
+                    })
+                }
             }
         } //: Navigation
     }
