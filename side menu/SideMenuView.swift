@@ -21,6 +21,13 @@ struct SideMenuView: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 32) {
                         SideMenuHeaderView()
+                        
+                        VStack {
+                            ForEach(SideMenuOptionModel.allCases) { item in
+                                SideMenuRowView()
+                            }
+                        }
+                        
                         Spacer()
                     }
                     .padding()
